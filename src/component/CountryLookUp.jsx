@@ -2,12 +2,15 @@
 import React, { useEffect, useState } from "react";
 
 function CountryLookUp() {
-  const [country, setCountry] = useState("Nepal");
-  //   useEffect(() => {
-  //     fetch(`https://extreme-ip-lookup.com/json/?key=${process.env.IP_API_KEY}`)
-  //       .then((res) => res.json())
-  //       .then((data) => setCountry(data));
-  //   }, []);
+  const [country, setCountry] = useState("");
+  useEffect(() => {
+    fetch(
+      `https://extreme-ip-lookup.com/json/?key=${process.env.NEXT_PUBLIC_IP_API_KEY}`,
+      { cache: "no-store" }
+    )
+      .then((res) => res.json())
+      .then((data) => setCountry(data.country));
+  }, []);
   return <div>{country}</div>;
 }
 

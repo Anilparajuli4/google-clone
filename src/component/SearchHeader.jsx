@@ -8,7 +8,7 @@ import SearchHederOption from "./SearchHederOption";
 
 function SearchHeader() {
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 bg-white">
       <div className="flex w-full p-6 items-center justify-between">
         <Link href="/">
           <Image
@@ -21,11 +21,11 @@ function SearchHeader() {
         <div className="flex-1">
           <SearchBox />
         </div>
-        <div className="hidden md:inline-flex space-x-2">
+        <div className="hidden md:inline-flex space-x-5">
           <RiSettings3Line className="header-icon" />
           <TbGridDots className="header-icon" />
         </div>
-        <button className="bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-all ml-2">
+        <button className="bg-blue-500 text-white px-3 sm:px-6 py-1 sm:py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-all ml-2">
           sign in
         </button>
       </div>

@@ -10,6 +10,6 @@
     @apply hover:underline cursor-pointer;
   }
   .header-icon {
-    @apply bg-transparent hover:bg-gray-200 text-4xl rounded-full cursor-pointer;
+    @apply bg-transparent hover:bg-gray-200 text-xl rounded-full cursor-pointer;
   }
 }

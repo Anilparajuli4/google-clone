@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 function HomeSearch() {
   const router = useRouter();
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
   const [randomSearchLoading, setRandomSearchLoading] = useState(false);
   function handleSubmit(e) {
     e.preventDefault();
@@ -18,6 +18,7 @@ function HomeSearch() {
     const response = await fetch("https://random-word-api.herokuapp.com/word");
     const data = await response.json();
     const word = data[0];
+
     if (!response) return;
     router.push(`/search/web?searchTerm=${word}`);
     setRandomSearchLoading(false);

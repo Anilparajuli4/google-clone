@@ -16,7 +16,7 @@ function PaginationButton() {
           href={`${pathname}?searchTerm=${searchTerm}&start=${startIndex - 10}`}
         >
           <div className="flex flex-col cursor-pointer items-center hover:underline">
-            <BsChevronLeft classNam="ml-4" />
+            <BsChevronLeft className="ml-4" />
             <p>Previous</p>
           </div>
         </Link>
@@ -26,7 +26,7 @@ function PaginationButton() {
           href={`${pathname}?searchTerm=${searchTerm}&start=${startIndex + 10}`}
         >
           <div className="flex flex-col cursor-pointer items-center hover:underline">
-            <BsChevronRight classNam="ml-6" />
+            <BsChevronRight className="ml-6" />
             <p>Next</p>
           </div>
         </Link>
